@@ -1,0 +1,30 @@
+﻿<Application x:Class="DNPL.App"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:local="clr-namespace:DNPL"
+			xmlns:viewModel="clr-namespace:DNPL.ViewModel"
+			xmlns:view="clr-namespace:DNPL.View"
+            StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Designs/Style.xaml"/>
+				<ResourceDictionary Source="Designs/Brushes.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<FontFamily x:Key="FiraCode">Fonts/FiraCode-Regular</FontFamily>
+			<DataTemplate DataType="{x:Type viewModel:MainWindowViewModel}">
+				<view:MainWindow/>
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type viewModel:DrinkButtonsViewModel}">
+				<view:DrinkButtonsView/>
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type viewModel:HistoryViewModel}">
+				<view:HistoryView/>
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+				<view:SettingsView/>
+			</DataTemplate>
+		</ResourceDictionary>
+         
+    </Application.Resources>
+</Application>

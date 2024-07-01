@@ -1,0 +1,81 @@
+﻿<Window x:Class="DNPL.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		xmlns:local="clr-namespace:DNPL.View"
+		xmlns:viewModel="clr-namespace:DNPL.ViewModel"
+		xmlns:core="clr-namespace:DNPL.Core"
+		ResizeMode="NoResize"
+		Background="{StaticResource MainBackground}"
+        Title="Drink now, Pay later!" Height="800" Width="500">
+	<Window.DataContext>
+		<viewModel:MainWindowViewModel/>
+	</Window.DataContext>
+	<Border Background="Transparent" BorderThickness="2" BorderBrush="#4D869C">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="3*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="90"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<!--LogoName-->
+			<Label x:Name="Lbl_Title"
+				Content="DNPL"
+				Width="70"
+				Style="{StaticResource LabelStyle}"/>
+			<!--Current Balance Info-->
+			<Grid x:Name="Grid_BalanceInfo"
+				Grid.Row="0" Grid.Column="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="2*"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Label x:Name="Lbl_CurrentBalanceInfo"
+					Grid.Row="0" Grid.Column="0"
+					Content="Current Balance on Account: "
+					Style="{StaticResource LabelStyle}"/>
+				<TextBlock x:Name="Tbl_CurrentBalanceInfo"
+						Grid.Column="1"
+						Text="{Binding Tbl_CurrentBalanceInfo,UpdateSourceTrigger=PropertyChanged}"
+						Style="{StaticResource TextBlockStye}"/>
+			</Grid>
+			<Grid x:Name="Grid_Navbar"
+				Grid.Row="1" Grid.Column="0">
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Button x:Name="Btn_DrinkButtons"
+						Grid.Row="0"
+						Style="{StaticResource ButtonStyle}"
+						Content="Drinks"
+						Command="{Binding DrinkbuttonsViewCommand}"/>
+				<Button x:Name="Btn_ChangeValues"
+						Grid.Row="1"
+						Style="{StaticResource ButtonStyle}"
+						Content="Settings"
+						Command="{Binding SettingsViewCommand}"/>
+				<Button x:Name="Btn_History"
+						Grid.Row="2"
+						Style="{StaticResource ButtonStyle}"
+						Content="History"
+						Command="{Binding HistoryViewCommand}"/>
+				<Button x:Name="Btn_Exit"
+						Grid.Row="3"
+						Style="{StaticResource ButtonStyle}"
+						Content="Exit"
+						Command="{Binding ExitCommand}"/>
+			</Grid>
+			<ContentControl Grid.Row="1" Grid.Column="1"
+							Content="{Binding CurrentView}"/>
+
+		</Grid>
+	</Border>
+</Window>

@@ -1,0 +1,10 @@
+# Ignore all folders named "FileContentIndex" within .vs directories
+.vs/*/FileContentIndex/
+
+# Ignore all folders named "FileContentIndex" within .vs directories and their subdirectories
+.vs/**/FileContentIndex/
+
+#Ignore all the bins and obs folder
+# Ignore all bin/ and obj/ folders within all solutions and their contents
+**/bin/
+**/obj/
