@@ -23,64 +23,79 @@
 				<RowDefinition/>
 				<RowDefinition/>
 				<RowDefinition/>
+				<RowDefinition/>
 			</Grid.RowDefinitions>
 			<!--Buttons-->
 			<Button x:Name="Btn_Mate"
 					Grid.Row="0"
 					Content="Mate"
-					Style="{StaticResource ButtonStyle}"/>
+					Margin="20"
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding DrinkButtonPushedCommand}"
+					CommandParameter="Mate"/>
 			<Button x:Name="Btn_Eistee"
 					Grid.Row="1"
+					Margin="20"
 					Content="Eistee"
-					Style="{StaticResource ButtonStyle}"/>
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding DrinkButtonPushedCommand}"
+					CommandParameter="Eistee"/>
 			<Button x:Name="Almdudler"
 					Grid.Row="2"
+					Margin="20"
 					Content="Almdudler"
-					Style="{StaticResource ButtonStyle}"/>
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding DrinkButtonPushedCommand}"
+					CommandParameter="Almdudler"/>
 			<Button x:Name="Cola"
 					Grid.Row="3"
+					Margin="20"
 					Content="Cola"
-					Style="{StaticResource ButtonStyle}"/>
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding DrinkButtonPushedCommand}"
+					CommandParameter="Cola"/>
+			<Button x:Name="Btn_Special"
+					Grid.Row="4"
+					Content="Special"
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding SpecialCommand}"/>
 			<!--PriceTags-->
 			<TextBlock x:Name="Tbl_MatePrice"
-						Grid.Row="0" Grid.Column="1"
-					    Text="{Binding MatePrice}"
-					    Style="{StaticResource TextBlockCoolStyle}"/>
+					Grid.Row="0" Grid.Column="1"
+					Text="{Binding MatePrice}"
+					Style="{StaticResource TextBlockCoolStyle}"/>
 			<Label x:Name="Lbl_MateCounter"
-				   Grid.Row="0" Grid.Column="1"
-				   VerticalAlignment="Bottom"
-				   Style="{StaticResource LabelCounterStyle}"
-				   Content="{Binding MateCounter}"/>
+				    Grid.Row="0" Grid.Column="1"
+				    VerticalAlignment="Bottom"
+				    Style="{StaticResource LabelCounterStyle}"
+				    Content="{Binding MateCounter,UpdateSourceTrigger=PropertyChanged}"/>
 			<TextBlock x:Name="Tbl_EisteePrice"
-					    Grid.Row="1" Grid.Column="1"
-					    Text="{Binding EisteePrice}"
-					    Style="{StaticResource TextBlockCoolStyle}"/>
+					Grid.Row="1" Grid.Column="1"
+					Text="{Binding EisteePrice}"
+					Style="{StaticResource TextBlockCoolStyle}"/>
 			<Label x:Name="Lbl_EisteeCounter"
-				   Grid.Row="0" Grid.Column="1"
-				   VerticalAlignment="Bottom"
-				   Style="{StaticResource LabelCounterStyle}"
-				   Content="{Binding EisteeCounter}"/>
+			 	   Grid.Row="1" Grid.Column="1"
+			 	   VerticalAlignment="Bottom"
+			 	   Style="{StaticResource LabelCounterStyle}"
+			 	   Content="{Binding EisteeCounter,UpdateSourceTrigger=PropertyChanged}"/>
 			<TextBlock x:Name="Tbl_AlmdudlerPrice"
-					    Grid.Row="2" Grid.Column="1"
-					    Text="{Binding AlmdudlerPrice}"
-					    Style="{StaticResource TextBlockCoolStyle}"/>
+					Grid.Row="2" Grid.Column="1"
+					Text="{Binding AlmdudlerPrice}"
+					Style="{StaticResource TextBlockCoolStyle}"/>
 			<Label x:Name="Lbl_AlmdudlerCounter"
-				   Grid.Row="2" Grid.Column="1"
-				   VerticalAlignment="Bottom"
-				   Style="{StaticResource LabelCounterStyle}"
-				   Content="{Binding AlmdudlerCounter}"/>
+					Grid.Row="2" Grid.Column="1"
+					VerticalAlignment="Bottom"
+					Style="{StaticResource LabelCounterStyle}"
+					Content="{Binding AlmdudlerCounter,UpdateSourceTrigger=PropertyChanged}"/>
 			<TextBlock x:Name="Tbl_ColaPrice"
-					    Grid.Row="3" Grid.Column="1"
-					    Text="{Binding ColaPrice}"
-					    Style="{StaticResource TextBlockCoolStyle}"/>
+					Grid.Row="3" Grid.Column="1"
+					Text="{Binding ColaPrice}"
+					Style="{StaticResource TextBlockCoolStyle}"/>
 			<Label x:Name="Lbl_ColaCounter"
-				   Grid.Row="3" Grid.Column="1"
-				   VerticalAlignment="Bottom"
-				   Style="{StaticResource LabelCounterStyle}"
-				   Content="{Binding ColaCounter}"/>
-
-
+				    Grid.Row="3" Grid.Column="1"
+				    VerticalAlignment="Bottom"
+				    Style="{StaticResource LabelCounterStyle}"
+				    Content="{Binding ColaCounter,UpdateSourceTrigger=PropertyChanged}"/>
 		</Grid>
-
 	</Border>
 </UserControl>

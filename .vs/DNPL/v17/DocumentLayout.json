@@ -11,32 +11,8 @@
       "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\drinkbuttonsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\viewmodel\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:viewmodel\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\view\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\designs\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:designs\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\view\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -45,6 +21,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\viewmodel\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:viewmodel\\settingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\view\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\viewmodel\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:viewmodel\\historyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\model\\drinkentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:model\\drinkentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|f:\\20-29 code\\29 appsbyme\\dnpl\\view\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\historyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,33 +53,33 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 118,
           "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
               "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\MainWindow.xaml",
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-30T10:33:27.827Z",
+              "WhenOpened": "2024-07-03T08:58:23.724Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
               "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAUwDEAAAAtAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAUwEcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:45:46.127Z",
+              "WhenOpened": "2024-07-03T06:54:38.657Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -92,7 +92,7 @@
               "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\DrinkButtonsView.xaml",
               "RelativeToolTip": "View\\DrinkButtonsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-30T14:58:13.531Z",
+              "WhenOpened": "2024-07-03T06:58:06.262Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -104,77 +104,64 @@
               "RelativeDocumentMoniker": "ViewModel\\DrinkButtonsViewModel.cs",
               "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\DrinkButtonsViewModel.cs",
               "RelativeToolTip": "ViewModel\\DrinkButtonsViewModel.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAIwCwAAAAAAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAA5wDAAAAB+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:55:58.139Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SettingsView.xaml",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\SettingsView.xaml",
-              "RelativeDocumentMoniker": "View\\SettingsView.xaml",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\SettingsView.xaml",
-              "RelativeToolTip": "View\\SettingsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-30T14:58:09.268Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SettingsViewModel.cs",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\SettingsViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\SettingsViewModel.cs",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\SettingsViewModel.cs",
-              "RelativeToolTip": "ViewModel\\SettingsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:56:46.212Z",
+              "WhenOpened": "2024-07-03T06:51:36.108Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HistoryView.xaml",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\HistoryView.xaml",
-              "RelativeDocumentMoniker": "View\\HistoryView.xaml",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\HistoryView.xaml",
-              "RelativeToolTip": "View\\HistoryView.xaml",
+              "Title": "SettingsView.xaml",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\SettingsView.xaml",
+              "RelativeDocumentMoniker": "View\\SettingsView.xaml",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\SettingsView.xaml",
+              "RelativeToolTip": "View\\SettingsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-30T14:58:12.246Z",
+              "WhenOpened": "2024-07-03T08:59:26.986Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HistoryViewModel.cs",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\HistoryViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\HistoryViewModel.cs",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\HistoryViewModel.cs",
-              "RelativeToolTip": "ViewModel\\HistoryViewModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Title": "SettingsViewModel.cs",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\SettingsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\SettingsViewModel.cs",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\SettingsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\SettingsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:56:29.168Z",
+              "WhenOpened": "2024-07-03T06:56:40.228Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountEntry.cs",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\AccountEntry.cs",
-              "RelativeDocumentMoniker": "Model\\AccountEntry.cs",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\AccountEntry.cs",
-              "RelativeToolTip": "Model\\AccountEntry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "HistoryView.xaml",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\HistoryView.xaml",
+              "RelativeDocumentMoniker": "View\\HistoryView.xaml",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\View\\HistoryView.xaml",
+              "RelativeToolTip": "View\\HistoryView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:59:29.215Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HistoryViewModel.cs",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\HistoryViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\HistoryViewModel.cs",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\ViewModel\\HistoryViewModel.cs",
+              "RelativeToolTip": "ViewModel\\HistoryViewModel.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T16:31:29.256Z",
+              "WhenOpened": "2024-07-03T06:52:37.388Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -183,27 +170,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "DrinkEntry.cs",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\DrinkEntry.cs",
+              "RelativeDocumentMoniker": "Model\\DrinkEntry.cs",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\DrinkEntry.cs",
+              "RelativeToolTip": "Model\\DrinkEntry.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAMAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T10:47:24.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountEntry.cs",
+              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\AccountEntry.cs",
+              "RelativeDocumentMoniker": "Model\\AccountEntry.cs",
+              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Model\\AccountEntry.cs",
+              "RelativeToolTip": "Model\\AccountEntry.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T10:47:21.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DBConnection.cs",
               "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Database\\DBConnection.cs",
               "RelativeDocumentMoniker": "Database\\DBConnection.cs",
               "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Database\\DBConnection.cs",
               "RelativeToolTip": "Database\\DBConnection.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA9wCMAAAAFAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAmwJUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T16:01:22.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Style.xaml",
-              "DocumentMoniker": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Designs\\Style.xaml",
-              "RelativeDocumentMoniker": "Designs\\Style.xaml",
-              "ToolTip": "F:\\20-29 Code\\29 AppsByMe\\DNPL\\Designs\\Style.xaml",
-              "RelativeToolTip": "Designs\\Style.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-30T15:10:17.303Z",
+              "WhenOpened": "2024-07-03T09:46:40.631Z",
               "EditorCaption": ""
             }
           ]

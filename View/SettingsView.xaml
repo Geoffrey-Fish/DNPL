@@ -10,9 +10,98 @@
 			Background="Transparent"
             d:DesignHeight="650" d:DesignWidth="350">
 	<UserControl.DataContext>
-        <viewModel:SettingsViewModel/>
+		<viewModel:SettingsViewModel/>
 	</UserControl.DataContext>
 	<Border>
-		
+		<Grid x:Name="Grid_Main">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="110"/>
+				<RowDefinition Height="140"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			
+			<!-- Title-->
+			<Label x:Name="Lbl_Title"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Left"
+				Width="240"
+				Content="Change Prices of Drinks,"
+				Style="{StaticResource LabelStyle}"/>
+			<Label x:Name="Lbl_Title2"
+				HorizontalAlignment="Center"
+				Width="240"
+				Content="load up your Accountbalance"
+				Style="{StaticResource LabelStyle}"/>
+			<Label x:Name="Lbl_Title3"
+				VerticalAlignment="Bottom"
+				HorizontalAlignment="Right"
+				Width="240"
+				Content="and start drinking!"
+				Style="{StaticResource LabelStyle}"/>
+			
+			<!-- Load Balance Field-->
+			<StackPanel x:Name="Stack_LoadBalance"
+						Grid.Row="1"
+						Orientation="Vertical" Margin="10">
+				<Button x:Name="Btn_LoadBalance"
+						Content="Load Balance"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding LoadBalanceCommand}"/>
+				<TextBox x:Name="Tbx_LoadBalance"
+						Visibility="{Binding LoadBalanceVisibility}"
+						Text="{Binding Tbx_LoadBalance,UpdateSourceTrigger=PropertyChanged}"
+						Style="{StaticResource TextBoxStyle}"/>
+				<Button x:Name="Btn_SaveLoadBalance"
+						Content="Save new Balance"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding SaveLoadBalanceCommand}"/>
+			</StackPanel>
+			
+			<!--Change Drink Prices-->
+			<StackPanel x:Name="Stack_ChangeDrinks"
+						Grid.Row="2"
+						Orientation="Vertical" Margin="10">
+				<Button x:Name="Btn_MateDrink"
+						Content="Mate"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding ChangePriceCommand}"
+						CommandParameter="Mate"/>
+				<TextBox x:Name="Tbx_MatePrice"
+						Style="{StaticResource TextBoxStyle}"
+						Visibility="{Binding MatePriceVisibility}"
+						Text="{Binding Tbx_MatePrice,UpdateSourceTrigger=PropertyChanged}"/>
+				<Button x:Name="Btn_EisteeDrink"
+						Content="Eistee"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding ChangePriceCommand}"
+						CommandParameter="Eistee"/>
+				<TextBox x:Name="Tbx_EisteePrice"
+						Style="{StaticResource TextBoxStyle}"
+						Visibility="{Binding EisteePriceVisibility}"
+						Text="{Binding Tbx_EisteePrice,UpdateSourceTrigger=PropertyChanged}"/>
+				<Button x:Name="Btn_AlmdudlerDrink"
+						Content="Almdudler"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding ChangePriceCommand}"
+						CommandParameter="Almdudler"/>
+				<TextBox x:Name="Tbx_AlmdudlerPrice"
+						Style="{StaticResource TextBoxStyle}"
+						Visibility="{Binding AlmdudlerPriceVisibility}"
+						Text="{Binding Tbx_AlmdudlerPrice,UpdateSourceTrigger=PropertyChanged}"/>
+				<Button x:Name="Btn_ColaDrink"
+						Content="Cola"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding ChangePriceCommand}"
+						CommandParameter="Cola"/>
+				<TextBox x:Name="Tbx_ColaPrice"
+						Style="{StaticResource TextBoxStyle}"
+						Visibility="{Binding ColaPriceVisibility}"
+						Text="{Binding Tbx_ColaPrice,UpdateSourceTrigger=PropertyChanged}"/>
+				<Button x:Name="Btn_SaveChangePrice"
+						Content="Save new Drinkprice"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding SaveChangePriceCommand}"/>
+			</StackPanel>
+		</Grid>
 	</Border>
 </UserControl>

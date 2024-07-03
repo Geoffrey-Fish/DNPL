@@ -26,23 +26,29 @@
 			<!--LogoName-->
 			<Label x:Name="Lbl_Title"
 				Content="DNPL"
-				Width="70"
+				Width="90"
+				Height="50"
+				FontSize="25"
 				Style="{StaticResource LabelStyle}"/>
 			<!--Current Balance Info-->
 			<Grid x:Name="Grid_BalanceInfo"
 				Grid.Row="0" Grid.Column="1">
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="2*"/>
-					<ColumnDefinition/>
+					<ColumnDefinition Width="280"/>
+					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
-				<Label x:Name="Lbl_CurrentBalanceInfo"
+				<Button x:Name="Lbl_CurrentBalanceInfo"
 					Grid.Row="0" Grid.Column="0"
 					Content="Current Balance on Account: "
-					Style="{StaticResource LabelStyle}"/>
+					FontSize="18"
+					Width="260"
+					Height="30"
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding CurrentBalanceInfoCommand}"/>
 				<TextBlock x:Name="Tbl_CurrentBalanceInfo"
-						Grid.Column="1"
-						Text="{Binding Tbl_CurrentBalanceInfo,UpdateSourceTrigger=PropertyChanged}"
-						Style="{StaticResource TextBlockStye}"/>
+					Grid.Column="1"
+					Text="{Binding Tbl_CurrentBalanceInfo,UpdateSourceTrigger=PropertyChanged}"
+					Style="{StaticResource TextBlockCoolStyle}"/>
 			</Grid>
 			<Grid x:Name="Grid_Navbar"
 				Grid.Row="1" Grid.Column="0">
@@ -51,31 +57,36 @@
 					<RowDefinition/>
 					<RowDefinition/>
 					<RowDefinition/>
+					<RowDefinition/>	
 				</Grid.RowDefinitions>
 				<Button x:Name="Btn_DrinkButtons"
-						Grid.Row="0"
-						Style="{StaticResource ButtonStyle}"
-						Content="Drinks"
-						Command="{Binding DrinkbuttonsViewCommand}"/>
+					Grid.Row="0"
+					Style="{StaticResource ButtonStyle}"
+					Content="Drinks"
+					Command="{Binding DrinkButtonsViewCommand}"/>
 				<Button x:Name="Btn_ChangeValues"
-						Grid.Row="1"
-						Style="{StaticResource ButtonStyle}"
-						Content="Settings"
-						Command="{Binding SettingsViewCommand}"/>
+					Grid.Row="1"
+					Style="{StaticResource ButtonStyle}"
+					Content="Settings"
+					Command="{Binding SettingsViewCommand}"/>
 				<Button x:Name="Btn_History"
-						Grid.Row="2"
-						Style="{StaticResource ButtonStyle}"
-						Content="History"
-						Command="{Binding HistoryViewCommand}"/>
+					Grid.Row="2"
+					Style="{StaticResource ButtonStyle}"
+					Content="History"
+					Command="{Binding HistoryViewCommand}"/>
 				<Button x:Name="Btn_Exit"
-						Grid.Row="3"
+					Grid.Row="3"
+					Style="{StaticResource ButtonStyle}"
+					Content="Exit"
+					Command="{Binding ExitCommand}"/>
+				<Button x:Name="Btn_Special"
+						Grid.Row="4"
+						Content="Special"
 						Style="{StaticResource ButtonStyle}"
-						Content="Exit"
-						Command="{Binding ExitCommand}"/>
+						Command="{Binding SpecialViewCommand}"/>
 			</Grid>
 			<ContentControl Grid.Row="1" Grid.Column="1"
-							Content="{Binding CurrentView}"/>
-
+					Content="{Binding CurrentView}"/>
 		</Grid>
 	</Border>
 </Window>

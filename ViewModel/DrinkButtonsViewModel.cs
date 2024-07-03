@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 using DNPL.Core;
@@ -7,14 +8,17 @@ using DNPL.Model;
 
 namespace DNPL.ViewModel;
 public class DrinkButtonsViewModel:ObservableObject {
-	public ICommand DrinkButtonPushedCommand { get; set; }
 
-	#region private static members
-	private readonly string accountBalancePath = PathMaker.GetAbsolutePath("AccountBalance.csv");
-	private readonly string drinkEntriesPath = PathMaker.GetAbsolutePath("DrinkEntries.csv");
+	public event EventHandler DrinkButtonPushed;
+
+	#region Commands
+	public ICommand DrinkButtonPushedCommand { get; set; }
+	public ICommand SpecialCommand { get; set; }
 	#endregion
 
 	#region Database
+	private readonly string accountBalancePath = PathMaker.GetAbsolutePath("AccountBalance.csv");
+	private readonly string drinkEntriesPath = PathMaker.GetAbsolutePath("DrinkEntries.csv");
 	private DBConnection accountBalanceDB { get; set; }
 	public DBConnection AccountBalanceDB { get => accountBalanceDB; set { accountBalanceDB = value; OnPropertyChanged(nameof(AccountBalanceDB)); } }
 	private DBConnection drinkEntriesDB { get; set; }
@@ -34,40 +38,65 @@ public class DrinkButtonsViewModel:ObservableObject {
 	public string AlmdudlerPrice { get { return _AlmdudlerPrice; } set { _AlmdudlerPrice = value; OnPropertyChanged(nameof(AlmdudlerPrice)); } }
 	private string _ColaPrice { get; set; }
 	public string ColaPrice { get { return _ColaPrice; } set { _ColaPrice = value; OnPropertyChanged(nameof(ColaPrice)); } }
-	public int MateCounter { get; set; }
-	public int EisteeCounter { get; set; }
-	public int AlmdudlerCounter { get; set; }
-	public int ColaCounter { get; set; }
+	//Counters for Visibility enhancement
+	private int _MateCounter { get; set; }
+	public int MateCounter { get { return _MateCounter; } set { _MateCounter = value; OnPropertyChanged(nameof(MateCounter)); } }
+	private int _EisteeCounter { get; set; }
+	public int EisteeCounter { get { return _EisteeCounter; } set { _EisteeCounter = value; OnPropertyChanged(nameof(EisteeCounter)); } }
+	private int _AlmdudlerCounter { get; set; }
+	public int AlmdudlerCounter { get { return _AlmdudlerCounter; } set { _AlmdudlerCounter = value; OnPropertyChanged(nameof(AlmdudlerCounter)); } }
+	private int _ColaCounter { get; set; }
+	public int ColaCounter { get { return _ColaCounter; } set { _ColaCounter = value; OnPropertyChanged(nameof(ColaCounter)); } }
 	#endregion
 
-
-
-
 	public DrinkButtonsViewModel() {
-		AccountBalanceDB = new(accountBalancePath);
-		DrinkEntriesDB = new(drinkEntriesPath);
+		AccountBalanceDB = DBConnection.GetInstance(accountBalancePath);
+		DrinkEntriesDB = DBConnection.GetInstance(drinkEntriesPath);
 		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
 		DrinkEntries = DrinkEntriesDB.GetDrinkEntries();
 		DrinkButtonPushedCommand = new RelayCommand(execute: ExecuteDrinkButtonPushedCommand, canExecute: _ => true);
+		SpecialCommand = new RelayCommand(execute: _ => ExecuteSpecialCommand(), canExecute: _ => true);
 		MatePrice = GetPrice("Mate").ToString() + " €";
 		EisteePrice = GetPrice("Eistee").ToString() + " €";
 		AlmdudlerPrice = GetPrice("Almdudler").ToString() + " €";
 		ColaPrice = GetPrice("Cola").ToString() + " €";
 	}
+
+	private void ExecuteSpecialCommand() {
+		MessageBox.Show($"MateCounter: {MateCounter}\nEisteeCounter: {EisteeCounter}\nAlmdudlerCounter: {AlmdudlerCounter}\nColaCounter: {ColaCounter}");
+	}
+
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
 		if(drink is string) {
+			decimal amount = GetPrice(drink as string);
+			decimal before = AccountEntry.After;
 			AccountEntry entry = new AccountEntry {
-				Before = AccountEntry.After
-				, Amount = GetPrice(drink as string)
-				, After = AccountEntry.After - AccountEntry.Amount
-				, Type = drink as string + " purchased"
+				Before = before
+				, Amount = -amount
+				, After = before - amount
+				, Type = (drink as string) + " purchased"
 				, Date = DateTime.Now
 			};
-			AccountBalanceDB.SetAccountEntry(AccountEntry);
+			AccountBalanceDB.SetAccountEntry(entry);
+			switch(drink.ToString()) {
+				case "Mate":
+					MateCounter++;
+					break;
+				case "Eistee":
+					EisteeCounter++;
+					break;
+				case "Almdudler":
+					AlmdudlerCounter++;
+					break;
+				case "Cola":
+					ColaCounter++;
+					break;
+			}
 		}
+		DrinkButtonPushed?.Invoke(this, EventArgs.Empty);
 	}
 	//Little getaround to fetch the price of the drink
-	private double GetPrice(string drink) {
+	private decimal GetPrice(string drink) {
 		return DrinkEntries.FirstOrDefault(x => x.Name == drink).Price;
 	}
 }
