@@ -57,6 +57,7 @@
 					<RowDefinition/>
 					<RowDefinition/>
 					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Button x:Name="Btn_DrinkButtons"
 					Grid.Row="0"
@@ -73,8 +74,13 @@
 					Style="{StaticResource ButtonStyle}"
 					Content="History"
 					Command="{Binding HistoryViewCommand}"/>
-				<Button x:Name="Btn_Exit"
+				<Button x:Name="Btn_Statistics"
 					Grid.Row="3"
+					Style="{StaticResource ButtonStyle}"
+					Content="Statistics"
+					Command="{Binding StatisticsViewCommand}"/>
+				<Button x:Name="Btn_Exit"
+					Grid.Row="4"
 					Style="{StaticResource ButtonStyle}"
 					Content="Exit"
 					Command="{Binding ExitCommand}"/>

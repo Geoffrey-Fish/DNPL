@@ -13,18 +13,16 @@ public class MainWindowViewModel:ObservableObject {
 	public ICommand DrinkButtonsViewCommand { get; set; }
 	public ICommand SettingsViewCommand { get; set; }
 	public ICommand HistoryViewCommand { get; set; }
+	public ICommand StatisticsViewCommand { get; set; }
 	public ICommand ExitCommand { get; set; }
-	public ICommand SpecialViewCommand { get; set; }
 	#endregion
 
 	#region Database
 	private readonly string accountBalancePath = PathMaker.GetAbsolutePath("AccountBalance.csv");
 	private DBConnection accountBalanceDB { get; set; }
 	public DBConnection AccountBalanceDB { get => accountBalanceDB; set { accountBalanceDB = value; OnPropertyChanged(nameof(AccountBalanceDB)); } }
-	private DBConnection drinkEntriesDB { get; set; }
 	private AccountEntry accountEntry { get; set; }
 	public AccountEntry AccountEntry { get => accountEntry; set { accountEntry = value; OnPropertyChanged(nameof(AccountEntry)); } }
-	private List<DrinkEntry> drinkEntries { get; set; }
 	#endregion
 
 	#region Properties
@@ -59,14 +57,14 @@ public class MainWindowViewModel:ObservableObject {
 		SettingsViewCommand = new RelayCommand(_ => CurrentView = _settingsViewModel);
 		HistoryViewCommand = new RelayCommand(_ => CurrentView = _historyViewModel);
 
-		CurrentBalanceInfoCommand = new RelayCommand(_ => UpdatePrices(), _ => true);
+		CurrentBalanceInfoCommand = new RelayCommand(_ => UpdatePrice(), _ => true);
 		//set up the view
 		CurrentView = _drinkButtonsViewModel;
 		//set up Exit Button
 		ExitCommand = new RelayCommand(execute: _ => Application.Current.Shutdown(), canExecute: _ => true);
 	}
 
-	private void UpdatePrices() {
+	private void UpdatePrice() {
 		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
 		Tbl_CurrentBalanceInfo = AccountEntry.After.ToString() + " €";
 	}

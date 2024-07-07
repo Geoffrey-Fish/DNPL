@@ -8,7 +8,6 @@ using DNPL.Model;
 namespace DNPL.ViewModel;
 public class DrinkButtonsViewModel:ObservableObject {
 
-	public event EventHandler DrinkButtonPushed;
 
 	#region Commands
 	public ICommand DrinkButtonPushedCommand { get; set; }
@@ -67,6 +66,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
 		if(drink is string) {
+			AccountEntry = AccountBalanceDB.GetCurrentAccountEntry(); //get updated AccountEntry,else you get wrong values
 			decimal amount = GetPrice(drink as string);
 			decimal before = AccountEntry.After;
 			AccountEntry entry = new AccountEntry {
@@ -92,10 +92,6 @@ public class DrinkButtonsViewModel:ObservableObject {
 					break;
 			}
 		}
-		CallTheHandler();
-	}
-	public void CallTheHandler() {
-		DrinkButtonPushed?.Invoke(this, EventArgs.Empty);
 	}
 	//Little getaround to fetch the price of the drink
 	private decimal GetPrice(string drink) {

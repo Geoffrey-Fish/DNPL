@@ -10,8 +10,6 @@ using DNPL.Model;
 namespace DNPL.ViewModel;
 public class SettingsViewModel:ObservableObject {
 
-	public event EventHandler BalanceUpdate;
-
 	#region Commands
 	public ICommand LoadBalanceCommand { get; set; }
 	public ICommand SaveLoadBalanceCommand { get; set; }
@@ -93,7 +91,6 @@ public class SettingsViewModel:ObservableObject {
 	private void ExecuteSaveLoadBalanceCommand() {
 		decimal before = AccountEntry.After;
 		decimal amount = decimal.TryParse(Tbx_LoadBalance, NumberStyles.Float, CultureInfo.CurrentCulture, out amount) ? amount : 0;
-		MessageBox.Show("Entered: " + amount);
 		AccountEntry entry = new AccountEntry {
 			Before = before
 			, Amount = amount
@@ -102,8 +99,8 @@ public class SettingsViewModel:ObservableObject {
 			, Date = DateTime.Now
 		};
 		AccountBalanceDB.SetAccountEntry(entry);
+		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
 		LoadBalanceVisibility = Visibility.Hidden;
-		BalanceUpdate?.Invoke(this, EventArgs.Empty);
 	}
 
 	#endregion

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="DNPL.View.StatisticsView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:DNPL.View"
+            xmlns:viewModel="clr-namespace:DNPL.ViewModel"
+			xmlns:core="clr-namespace:DNPL.Core"
+            mc:Ignorable="d" 
+			Background="Transparent"
+            d:DesignHeight="350" d:DesignWidth="350">
+	<Border Background="Transparent" BorderThickness="2" BorderBrush="#4D869C">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Label x:Name="Lbl_Title"
+				    Content="Statistics"
+					Grid.Row="0" Grid.ColumnSpan="2"
+				    Width="200"
+				    VerticalAlignment="Top"
+					Style="{StaticResource LabelStyle}"/>
+			<TextBlock x:Name="Tbl_Statistics"
+					Grid.Row="0" Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding StatisticsText,UpdateSourceTrigger=PropertyChanged}"/>
+			<Label x:Name="Lbl_Balance"
+				    Grid.Row="1" Grid.ColumnSpan="2"
+				    VerticalAlignment="Top"
+				    Width="200"
+					Style="{StaticResource LabelStyle}"
+					Content="Money spent in total"/>
+			<TextBlock x:Name="Tbl_BalanceTotal"
+					Grid.Row="1" Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding BalanceTotalText,UpdateSourceTrigger=PropertyChanged}"/>
+			<Label x:Name="Lbl_TopDrinks"
+					Grid.Row="2" Grid.ColumnSpan="2"
+				    VerticalAlignment="Top"
+				    Width="200"
+					Style="{StaticResource LabelStyle}"
+					Content="Top drinks"/>
+			<TextBlock x:Name="Tbl_TopDrinks"
+					Grid.Row="2" Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding TopDrinksText,UpdateSourceTrigger=PropertyChanged}"/>
+		</Grid>
+	</Border>
+</UserControl>
