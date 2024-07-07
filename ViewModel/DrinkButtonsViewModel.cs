@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Input;
 
 using DNPL.Core;
@@ -13,7 +12,6 @@ public class DrinkButtonsViewModel:ObservableObject {
 
 	#region Commands
 	public ICommand DrinkButtonPushedCommand { get; set; }
-	public ICommand SpecialCommand { get; set; }
 	#endregion
 
 	#region Database
@@ -29,7 +27,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 	public AccountEntry AccountEntry { get { return _AccountEntry; } set { _AccountEntry = value; OnPropertyChanged(nameof(AccountEntry)); } }
 	#endregion
 
-	#region Properties
+	#region Properties PriceTags
 	private string _MatePrice { get; set; }
 	public string MatePrice { get { return _MatePrice; } set { _MatePrice = value; OnPropertyChanged(nameof(MatePrice)); } }
 	private string _EisteePrice { get; set; }
@@ -38,6 +36,8 @@ public class DrinkButtonsViewModel:ObservableObject {
 	public string AlmdudlerPrice { get { return _AlmdudlerPrice; } set { _AlmdudlerPrice = value; OnPropertyChanged(nameof(AlmdudlerPrice)); } }
 	private string _ColaPrice { get; set; }
 	public string ColaPrice { get { return _ColaPrice; } set { _ColaPrice = value; OnPropertyChanged(nameof(ColaPrice)); } }
+	#endregion
+	#region Propertys Counters
 	//Counters for Visibility enhancement
 	private int _MateCounter { get; set; }
 	public int MateCounter { get { return _MateCounter; } set { _MateCounter = value; OnPropertyChanged(nameof(MateCounter)); } }
@@ -50,21 +50,20 @@ public class DrinkButtonsViewModel:ObservableObject {
 	#endregion
 
 	public DrinkButtonsViewModel() {
+		//set up the databasecontrols
 		AccountBalanceDB = DBConnection.GetInstance(accountBalancePath);
 		DrinkEntriesDB = DBConnection.GetInstance(drinkEntriesPath);
 		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
 		DrinkEntries = DrinkEntriesDB.GetDrinkEntries();
+		//set up the commands
 		DrinkButtonPushedCommand = new RelayCommand(execute: ExecuteDrinkButtonPushedCommand, canExecute: _ => true);
-		SpecialCommand = new RelayCommand(execute: _ => ExecuteSpecialCommand(), canExecute: _ => true);
+		//set up the price info
 		MatePrice = GetPrice("Mate").ToString() + " €";
 		EisteePrice = GetPrice("Eistee").ToString() + " €";
 		AlmdudlerPrice = GetPrice("Almdudler").ToString() + " €";
 		ColaPrice = GetPrice("Cola").ToString() + " €";
 	}
 
-	private void ExecuteSpecialCommand() {
-		MessageBox.Show($"MateCounter: {MateCounter}\nEisteeCounter: {EisteeCounter}\nAlmdudlerCounter: {AlmdudlerCounter}\nColaCounter: {ColaCounter}");
-	}
 
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
 		if(drink is string) {
@@ -93,6 +92,9 @@ public class DrinkButtonsViewModel:ObservableObject {
 					break;
 			}
 		}
+		CallTheHandler();
+	}
+	public void CallTheHandler() {
 		DrinkButtonPushed?.Invoke(this, EventArgs.Empty);
 	}
 	//Little getaround to fetch the price of the drink

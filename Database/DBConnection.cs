@@ -154,8 +154,19 @@ public class DBConnection:IDisposable {
 					Thread.Sleep(200);
 				}
 			}
+			for(int i = 0; i < 3; i++) {
+				try {
+					using(var stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.Read))
+					using(var writer = new StreamWriter(stream))
+					using(var csv = new CsvWriter(writer, System.Globalization.CultureInfo.CurrentCulture)) {
+						csv.WriteRecords(records);
+					}
+				} catch(IOException) {
+					if(i == 2) throw;
+					Thread.Sleep(200);
+				}
+			}
 		}
-		SaveAccountEntries(records);
 	}
 
 	#endregion
@@ -203,11 +214,12 @@ public class DBConnection:IDisposable {
 	}
 	#endregion
 
+
+	#region Disposing
 	public void Dispose() {
 		Dispose(true);
 		GC.SuppressFinalize(this);
 	}
-	#region Disposing
 	private bool disposed = false;
 	protected virtual void Dispose(bool disposing) {
 		if(!disposed) {

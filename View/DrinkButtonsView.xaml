@@ -9,9 +9,6 @@
             mc:Ignorable="d"
 			Background="Transparent"
             d:DesignHeight="650" d:DesignWidth="350">
-        <UserControl.DataContext>
-	    	<viewModel:DrinkButtonsViewModel/>
-        </UserControl.DataContext>
 	<Border>
 		<Grid x:Name="Grid_DrinkButtons" >
 			<Grid.ColumnDefinitions>
@@ -19,7 +16,6 @@
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
-				<RowDefinition/>
 				<RowDefinition/>
 				<RowDefinition/>
 				<RowDefinition/>
@@ -54,11 +50,6 @@
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
 					CommandParameter="Cola"/>
-			<Button x:Name="Btn_Special"
-					Grid.Row="4"
-					Content="Special"
-					Style="{StaticResource ButtonStyle}"
-					Command="{Binding SpecialCommand}"/>
 			<!--PriceTags-->
 			<TextBlock x:Name="Tbl_MatePrice"
 					Grid.Row="0" Grid.Column="1"

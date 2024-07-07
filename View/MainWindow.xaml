@@ -57,7 +57,6 @@
 					<RowDefinition/>
 					<RowDefinition/>
 					<RowDefinition/>
-					<RowDefinition/>	
 				</Grid.RowDefinitions>
 				<Button x:Name="Btn_DrinkButtons"
 					Grid.Row="0"
@@ -79,11 +78,6 @@
 					Style="{StaticResource ButtonStyle}"
 					Content="Exit"
 					Command="{Binding ExitCommand}"/>
-				<Button x:Name="Btn_Special"
-						Grid.Row="4"
-						Content="Special"
-						Style="{StaticResource ButtonStyle}"
-						Command="{Binding SpecialViewCommand}"/>
 			</Grid>
 			<ContentControl Grid.Row="1" Grid.Column="1"
 					Content="{Binding CurrentView}"/>

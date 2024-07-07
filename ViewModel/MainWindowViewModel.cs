@@ -52,37 +52,22 @@ public class MainWindowViewModel:ObservableObject {
 		Tbl_CurrentBalanceInfo = AccountEntry.After.ToString() + " €";
 		//set up the viewmodels
 		_drinkButtonsViewModel = new();
-		_drinkButtonsViewModel.DrinkButtonPushed += OnDrinkUpdate;
 		_settingsViewModel = new();
-		_settingsViewModel.BalanceUpdate += OnBalanceUpdate;
 		_historyViewModel = new();
 		//set up the commands
 		DrinkButtonsViewCommand = new RelayCommand(_ => CurrentView = _drinkButtonsViewModel);
 		SettingsViewCommand = new RelayCommand(_ => CurrentView = _settingsViewModel);
 		HistoryViewCommand = new RelayCommand(_ => CurrentView = _historyViewModel);
-		CurrentBalanceInfoCommand = new RelayCommand(_ => OnBalanceUpdate(this, EventArgs.Empty));
-		SpecialViewCommand = new RelayCommand(execute: _ => ExecuteSpecial(), _ => true);
+
+		CurrentBalanceInfoCommand = new RelayCommand(_ => UpdatePrices(), _ => true);
 		//set up the view
 		CurrentView = _drinkButtonsViewModel;
 		//set up Exit Button
 		ExitCommand = new RelayCommand(execute: _ => Application.Current.Shutdown(), canExecute: _ => true);
 	}
 
-	private void ExecuteSpecial() {
-		MessageBox.Show("Special View");
-	}
-
-	#region EventHandlers
-	/// <summary>
-	/// Event handler for balance update from DrinkInputViewModel and SettingsViewModel
-	/// </summary>
-	private void OnBalanceUpdate(object sender, EventArgs e) {
+	private void UpdatePrices() {
 		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
 		Tbl_CurrentBalanceInfo = AccountEntry.After.ToString() + " €";
 	}
-	private void OnDrinkUpdate(object sender, EventArgs e) {
-		AccountEntry = AccountBalanceDB.GetCurrentAccountEntry();
-		Tbl_CurrentBalanceInfo = AccountEntry.After.ToString() + " €";
-	}
-	#endregion
 }

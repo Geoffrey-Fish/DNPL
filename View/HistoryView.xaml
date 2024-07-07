@@ -9,9 +9,6 @@
             mc:Ignorable="d"
 			Background="Transparent"
             d:DesignHeight="650" d:DesignWidth="350">
-	<UserControl.DataContext>
-        <viewModel:HistoryViewModel/>
-	</UserControl.DataContext>
 	<Border>
 		<Grid>
 			<Grid.ColumnDefinitions>
