@@ -15,6 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net8.0-windows\DrinkEntries.csv" />
+    <None Include="bin\Debug\net8.0-windows\DrinkEntries.Designer.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="33.0.1" />
   </ItemGroup>
 
