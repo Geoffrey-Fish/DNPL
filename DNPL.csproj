@@ -7,10 +7,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <PackageIcon>dnpl.png</PackageIcon>
+    <ApplicationIcon>Designs\dnpl.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Designs\" />
+    <Content Include="Designs\dnpl.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="Core\" />
   </ItemGroup>

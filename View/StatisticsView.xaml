@@ -8,7 +8,7 @@
 			xmlns:core="clr-namespace:DNPL.Core"
             mc:Ignorable="d" 
 			Background="Transparent"
-            d:DesignHeight="650" d:DesignWidth="350">
+            d:DesignHeight="450" d:DesignWidth="350">
 	<Border Background="Transparent" BorderThickness="2" BorderBrush="#4D869C">
 		<Grid>
 			<Grid.ColumnDefinitions>
@@ -17,14 +17,14 @@
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>
 				<RowDefinition Height="auto"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 			
 			<Label x:Name="Lbl_TotalSpent"

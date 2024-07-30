@@ -9,22 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|c:\\users\\g.fisch\\20-29 code\\23 github\\23.11 personal github\\dnpl\\view\\statisticsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:view\\statisticsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|c:\\users\\g.fisch\\20-29 code\\23 github\\23.11 personal github\\dnpl\\database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|c:\\users\\g.fisch\\20-29 code\\23 github\\23.11 personal github\\dnpl\\viewmodel\\drinkbuttonsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:viewmodel\\drinkbuttonsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|c:\\users\\g.fisch\\20-29 code\\23 github\\23.11 personal github\\dnpl\\model\\drinkentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:model\\drinkentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|c:\\users\\g.fisch\\20-29 code\\23 github\\23.11 personal github\\dnpl\\model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D39AD51-E29C-4B96-903F-03AE3CA292DB}|DNPL.csproj|solutionrelative:model\\accountentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,63 +42,11 @@
               "Title": "StatisticsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\ViewModel\\StatisticsViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\StatisticsViewModel.cs",
-              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\ViewModel\\StatisticsViewModel.cs",
-              "RelativeToolTip": "ViewModel\\StatisticsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAA3AAAA",
+              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\ViewModel\\StatisticsViewModel.cs*",
+              "RelativeToolTip": "ViewModel\\StatisticsViewModel.cs*",
+              "ViewState": "AQIAACUAAAAAAAAAAAAQwEEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T13:57:52.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Database\\DBConnection.cs",
-              "RelativeDocumentMoniker": "Database\\DBConnection.cs",
-              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Database\\DBConnection.cs",
-              "RelativeToolTip": "Database\\DBConnection.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAowG4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T13:58:10.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountEntry.cs",
-              "DocumentMoniker": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Model\\AccountEntry.cs",
-              "RelativeDocumentMoniker": "Model\\AccountEntry.cs",
-              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Model\\AccountEntry.cs",
-              "RelativeToolTip": "Model\\AccountEntry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T13:59:54.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DrinkEntry.cs",
-              "DocumentMoniker": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Model\\DrinkEntry.cs",
-              "RelativeDocumentMoniker": "Model\\DrinkEntry.cs",
-              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\Model\\DrinkEntry.cs",
-              "RelativeToolTip": "Model\\DrinkEntry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T13:59:55.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DrinkButtonsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\ViewModel\\DrinkButtonsViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\DrinkButtonsViewModel.cs",
-              "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\ViewModel\\DrinkButtonsViewModel.cs",
-              "RelativeToolTip": "ViewModel\\DrinkButtonsViewModel.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwDMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:17:43.501Z",
               "EditorCaption": ""
             },
             {
@@ -126,7 +58,7 @@
               "ToolTip": "C:\\Users\\g.fisch\\20-29 Code\\23 GitHub\\23.11 Personal GitHub\\DNPL\\View\\StatisticsView.xaml",
               "RelativeToolTip": "View\\StatisticsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-30T14:31:42.514Z",
+              "WhenOpened": "2024-07-30T14:55:24.477Z",
               "EditorCaption": ""
             }
           ]

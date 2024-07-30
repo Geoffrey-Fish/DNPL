@@ -38,30 +38,39 @@ public class StatisticsViewModel:ObservableObject {
 		//set up the databasecontrols
 		AccountBalanceDB=DBConnection.GetInstance(accountBalancePath);
 		AccountEntries=AccountBalanceDB.GetAccountEntries();
+		CalculateStatistics(AccountEntries);
+
+	}
+	public static string ExtractDrinkName(string type) {
+		const string suffix = " purchased";
+		if(type.EndsWith(suffix)) {
+			return type.Substring(0,type.Length-suffix.Length);
+		}
+		return type;
 	}
 
-
 	public void CalculateStatistics(ObservableCollection<AccountEntry> accountEntries) {
-		var totalAmountPerDrink = accountEntries
-			.GroupBy(de => de.Type.Substring(0,de.Type.IndexOf(" ")))
+		var drinkEntries = accountEntries
+	.Where(ae => ae.Type.EndsWith(" purchased"))
+	.Select(ae => new { DrinkName = ExtractDrinkName(ae.Type),Amount = Math.Abs(ae.Amount) })
+	.ToList();
+		var totalAmountPerDrink = drinkEntries
+			.GroupBy(de => de.DrinkName)
 			.ToDictionary(g => g.Key,g => g.Sum(de => de.Amount));
-
 		var totalAmountOverall = totalAmountPerDrink.Values.Sum();
-
 		var mostUsedDrink = totalAmountPerDrink
 			.OrderByDescending(kvp => kvp.Value)
 			.FirstOrDefault().Key;
-
 		var leastUsedDrink = totalAmountPerDrink
 			.OrderBy(kvp => kvp.Value)
 			.FirstOrDefault().Key;
 
 		TopDrinkText=mostUsedDrink;
 		TotalSpentText=totalAmountOverall.ToString()+" €";
-		SpeziText=totalAmountPerDrink["Spezi"].ToString()+" €";
-		EisteeText=totalAmountPerDrink["Eistee"].ToString()+" €";
-		AlmdudlerText=totalAmountPerDrink["Almdudler"].ToString()+" €";
-		ColaText=totalAmountPerDrink["Cola"].ToString()+" €";
+		SpeziText="Spezi: "+totalAmountPerDrink["Spezi"].ToString()+" €";
+		EisteeText="Eistee: "+totalAmountPerDrink["Eistee"].ToString()+" €";
+		AlmdudlerText="Almdudler: "+totalAmountPerDrink["Almdudler"].ToString()+" €";
+		ColaText="Cola: "+totalAmountPerDrink["Cola"].ToString()+" €";
 
 	}
 }
