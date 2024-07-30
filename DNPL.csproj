@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <PackageIcon>dnpl.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\..\40-49 Misc\46 PicsNLogos\Logos\dnpl.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="bin\Debug\net8.0-windows\DrinkEntries.csv" />
     <None Include="bin\Debug\net8.0-windows\DrinkEntries.Designer.csv" />
   </ItemGroup>
