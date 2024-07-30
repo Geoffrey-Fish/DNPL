@@ -53,6 +53,7 @@ public class MainWindowViewModel:ObservableObject {
 		_drinkButtonsViewModel=new();
 		_settingsViewModel=new();
 		_historyViewModel=new();
+		_statisticsViewModel=new();
 		//set up the commands
 		DrinkButtonsViewCommand=new RelayCommand(_ => CurrentView=_drinkButtonsViewModel);
 		SettingsViewCommand=new RelayCommand(_ => CurrentView=_settingsViewModel);
