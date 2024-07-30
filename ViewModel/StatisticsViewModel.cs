@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 using DNPL.Core;
 using DNPL.Database;
@@ -9,6 +10,7 @@ public class StatisticsViewModel:ObservableObject {
 
 
 	#region Commands
+	public ICommand RefreshCommand { get; set; }
 	#endregion
 
 	#region Database
@@ -38,7 +40,7 @@ public class StatisticsViewModel:ObservableObject {
 		//set up the databasecontrols
 		AccountBalanceDB=DBConnection.GetInstance(accountBalancePath);
 		AccountEntries=AccountBalanceDB.GetAccountEntries();
-		CalculateStatistics(AccountEntries);
+		RefreshCommand=new RelayCommand(execute: _ => CalculateStatistics(AccountEntries),canExecute: _ => true);
 
 	}
 	public static string ExtractDrinkName(string type) {
