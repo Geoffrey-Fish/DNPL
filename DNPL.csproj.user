@@ -22,11 +22,7 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Update="bin\Debug\net8.0-windows\DrinkEntries.csv">
-      <SubType>Component</SubType>
-    </None>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Update="View\DrinkButtonsView.xaml">
       <SubType>Designer</SubType>
