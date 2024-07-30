@@ -25,6 +25,7 @@
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
+				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 			
 			<Label x:Name="Lbl_TotalSpent"
@@ -76,6 +77,11 @@
 					Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
 					Text="{Binding ColaText,UpdateSourceTrigger=PropertyChanged}" />
+			<Button x:Name="Btn_Refresh"
+					Grid.Row="9" Grid.ColumnSpan="2"
+					Content="Refresh"
+					Style="{StaticResource ButtonStyle}"
+					Command="{Binding RefreshCommand}"/>
 		</Grid>
 	</Border>
 </UserControl>
