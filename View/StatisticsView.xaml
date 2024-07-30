@@ -8,7 +8,7 @@
 			xmlns:core="clr-namespace:DNPL.Core"
             mc:Ignorable="d" 
 			Background="Transparent"
-            d:DesignHeight="350" d:DesignWidth="350">
+            d:DesignHeight="650" d:DesignWidth="350">
 	<Border Background="Transparent" BorderThickness="2" BorderBrush="#4D869C">
 		<Grid>
 			<Grid.ColumnDefinitions>
@@ -16,40 +16,66 @@
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<Label x:Name="Lbl_Title"
-				    Content="Statistics"
+			
+			<Label x:Name="Lbl_TotalSpent"
+				    Content="Money spent in total"
 					Grid.Row="0" Grid.ColumnSpan="2"
 				    Width="200"
 				    VerticalAlignment="Top"
 					Style="{StaticResource LabelStyle}"/>
-			<TextBlock x:Name="Tbl_Statistics"
-					Grid.Row="0" Grid.ColumnSpan="2"
-					Style="{StaticResource TextBlockCoolStyle}"
-					Text="{Binding StatisticsText,UpdateSourceTrigger=PropertyChanged}"/>
-			<Label x:Name="Lbl_Balance"
-				    Grid.Row="1" Grid.ColumnSpan="2"
-				    VerticalAlignment="Top"
-				    Width="200"
-					Style="{StaticResource LabelStyle}"
-					Content="Money spent in total"/>
-			<TextBlock x:Name="Tbl_BalanceTotal"
+			<TextBlock x:Name="Tbl_TotalSpent"
 					Grid.Row="1" Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
-					Text="{Binding BalanceTotalText,UpdateSourceTrigger=PropertyChanged}"/>
-			<Label x:Name="Lbl_TopDrinks"
-					Grid.Row="2" Grid.ColumnSpan="2"
+					Text="{Binding TotalSpentText,UpdateSourceTrigger=PropertyChanged}"/>
+			
+			<Label x:Name="Lbl_TopDrink"
+				    Grid.Row="2"
+				    Grid.ColumnSpan="2"
+				    VerticalAlignment="Top"
+				    Width="200"
+				    Style="{StaticResource LabelStyle}"
+				    Content="Top Drink" />
+			<TextBlock x:Name="Tbl_TopDrink"
+					Grid.Row="3" Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding TopDrinkText,UpdateSourceTrigger=PropertyChanged}"/>
+			
+			<Label x:Name="Lbl_DrinkList"
+					Grid.Row="4" Grid.ColumnSpan="2"
 				    VerticalAlignment="Top"
 				    Width="200"
 					Style="{StaticResource LabelStyle}"
-					Content="Top drinks"/>
-			<TextBlock x:Name="Tbl_TopDrinks"
-					Grid.Row="2" Grid.ColumnSpan="2"
+					Content="All Drinks"/>
+			<TextBlock x:Name="Tbl_Spezi"
+					Grid.Row="5"
+					Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
-					Text="{Binding TopDrinksText,UpdateSourceTrigger=PropertyChanged}"/>
+					Text="{Binding SpeziText,UpdateSourceTrigger=PropertyChanged}"/>
+			<TextBlock x:Name="Tbl_Eistee"
+					Grid.Row="6"
+					Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding EisteeText,UpdateSourceTrigger=PropertyChanged}" />
+			<TextBlock x:Name="Tbl_Almdudler"
+					Grid.Row="7"
+					Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding AlmdudlerText,UpdateSourceTrigger=PropertyChanged}" />
+			<TextBlock x:Name="Tbl_Cola"
+					Grid.Row="8"
+					Grid.ColumnSpan="2"
+					Style="{StaticResource TextBlockCoolStyle}"
+					Text="{Binding ColaText,UpdateSourceTrigger=PropertyChanged}" />
 		</Grid>
 	</Border>
 </UserControl>

@@ -13,10 +13,10 @@ public struct AccountEntry {
 
 public sealed class AccountEntryMap:ClassMap<AccountEntry> {
 	public AccountEntryMap() {
-		Map(m => m.Before).Name("Before");
-		Map(m => m.Amount).Name("Amount");
-		Map(m => m.After).Name("After");
-		Map(m => m.Type).Name("Type");
-		Map(m => m.Date).Name("Date");
+		Map(m => m.Before);
+		Map(m => m.Amount);
+		Map(m => m.After);
+		Map(m => m.Type);
+		Map(m => m.Date).TypeConverterOption.Format("yyyy-MM-dd");
 	}
 }

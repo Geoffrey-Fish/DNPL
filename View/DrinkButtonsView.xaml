@@ -22,13 +22,13 @@
 				<RowDefinition/>
 			</Grid.RowDefinitions>
 			<!--Buttons-->
-			<Button x:Name="Btn_Mate"
+			<Button x:Name="Btn_Spezi"
 					Grid.Row="0"
-					Content="Mate"
+					Content="Spezi"
 					Margin="20"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
-					CommandParameter="Mate"/>
+					CommandParameter="Spezi"/>
 			<Button x:Name="Btn_Eistee"
 					Grid.Row="1"
 					Margin="20"
@@ -51,15 +51,15 @@
 					Command="{Binding DrinkButtonPushedCommand}"
 					CommandParameter="Cola"/>
 			<!--PriceTags-->
-			<TextBlock x:Name="Tbl_MatePrice"
+			<TextBlock x:Name="Tbl_SpeziPrice"
 					Grid.Row="0" Grid.Column="1"
-					Text="{Binding MatePrice}"
+					Text="{Binding SpeziPrice}"
 					Style="{StaticResource TextBlockCoolStyle}"/>
-			<Label x:Name="Lbl_MateCounter"
+			<Label x:Name="Lbl_SpeziCounter"
 				    Grid.Row="0" Grid.Column="1"
 				    VerticalAlignment="Bottom"
 				    Style="{StaticResource LabelCounterStyle}"
-				    Content="{Binding MateCounter,UpdateSourceTrigger=PropertyChanged}"/>
+				    Content="{Binding SpeziCounter,UpdateSourceTrigger=PropertyChanged}"/>
 			<TextBlock x:Name="Tbl_EisteePrice"
 					Grid.Row="1" Grid.Column="1"
 					Text="{Binding EisteePrice}"

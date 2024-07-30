@@ -33,8 +33,8 @@ public class SettingsViewModel:ObservableObject {
 	#region Properties
 	private string _Tbx_LoadBalance { get; set; }
 	public string Tbx_LoadBalance { get { return _Tbx_LoadBalance; } set { _Tbx_LoadBalance=value; OnPropertyChanged(nameof(Tbx_LoadBalance)); } }
-	private string _Tbx_MatePrice { get; set; }
-	public string Tbx_MatePrice { get { return _Tbx_MatePrice; } set { _Tbx_MatePrice=value; OnPropertyChanged(nameof(Tbx_MatePrice)); } }
+	private string _Tbx_SpeziPrice { get; set; }
+	public string Tbx_SpeziPrice { get { return _Tbx_SpeziPrice; } set { _Tbx_SpeziPrice=value; OnPropertyChanged(nameof(Tbx_SpeziPrice)); } }
 	private string _Tbx_EisteePrice { get; set; }
 	public string Tbx_EisteePrice { get { return _Tbx_EisteePrice; } set { _Tbx_EisteePrice=value; OnPropertyChanged(nameof(Tbx_EisteePrice)); } }
 	private string _Tbx_AlmdudlerPrice { get; set; }
@@ -49,8 +49,8 @@ public class SettingsViewModel:ObservableObject {
 	#region Visibility
 	private Visibility _LoadBalanceVisibility { get; set; }
 	public Visibility LoadBalanceVisibility { get { return _LoadBalanceVisibility; } set { _LoadBalanceVisibility=value; OnPropertyChanged(nameof(LoadBalanceVisibility)); } }
-	private Visibility _MatePriceVisibility { get; set; }
-	public Visibility MatePriceVisibility { get { return _MatePriceVisibility; } set { _MatePriceVisibility=value; OnPropertyChanged(nameof(MatePriceVisibility)); } }
+	private Visibility _SpeziPriceVisibility { get; set; }
+	public Visibility SpeziPriceVisibility { get { return _SpeziPriceVisibility; } set { _SpeziPriceVisibility=value; OnPropertyChanged(nameof(SpeziPriceVisibility)); } }
 	private Visibility _EisteePriceVisibility { get; set; }
 	public Visibility EisteePriceVisibility { get { return _EisteePriceVisibility; } set { _EisteePriceVisibility=value; OnPropertyChanged(nameof(EisteePriceVisibility)); } }
 	private Visibility _AlmdudlerPriceVisibility { get; set; }
@@ -62,7 +62,7 @@ public class SettingsViewModel:ObservableObject {
 	public SettingsViewModel() {
 
 		LoadBalanceVisibility=Visibility.Hidden;
-		MatePriceVisibility=Visibility.Hidden;
+		SpeziPriceVisibility=Visibility.Hidden;
 		EisteePriceVisibility=Visibility.Hidden;
 		AlmdudlerPriceVisibility=Visibility.Hidden;
 		ColaPriceVisibility=Visibility.Hidden;
@@ -120,8 +120,8 @@ public class SettingsViewModel:ObservableObject {
 			PriceChangeInProgress=true;
 			if(drink is string) {
 				switch(drink) {
-					case "Mate":
-						MatePriceVisibility=Visibility.Visible;
+					case "Spezi":
+						SpeziPriceVisibility=Visibility.Visible;
 						break;
 					case "Eistee":
 						EisteePriceVisibility=Visibility.Visible;
@@ -157,7 +157,7 @@ public class SettingsViewModel:ObservableObject {
 		} else {
 			MessageBox.Show("Wrong Input from executechangepricecommand)");
 		}
-		MatePriceVisibility=Visibility.Hidden;
+		SpeziPriceVisibility=Visibility.Hidden;
 		EisteePriceVisibility=Visibility.Hidden;
 		AlmdudlerPriceVisibility=Visibility.Hidden;
 		ColaPriceVisibility=Visibility.Hidden;
@@ -171,9 +171,9 @@ public class SettingsViewModel:ObservableObject {
 	/// </summary>
 	/// <returns>Dictionary of Name and Price</returns>
 	private Dictionary<string,decimal> GetCurrentPriceChange() {
-		if(MatePriceVisibility==Visibility.Visible) {
+		if(SpeziPriceVisibility==Visibility.Visible) {
 			return new Dictionary<string,decimal> {
-				{ "Mate",decimal.TryParse(Tbx_MatePrice, NumberStyles.Float, CultureInfo.CurrentCulture, out decimal matePrice) ? matePrice : 0 }};
+				{ "Spezi",decimal.TryParse(Tbx_SpeziPrice, NumberStyles.Float, CultureInfo.CurrentCulture, out decimal SpeziPrice) ? SpeziPrice : 0 }};
 		} else if(EisteePriceVisibility==Visibility.Visible) {
 			return new Dictionary<string,decimal> { { "Eistee",decimal.TryParse(Tbx_EisteePrice,NumberStyles.Float,CultureInfo.CurrentCulture,out decimal eisteePrice) ? eisteePrice : 0 } };
 		} else if(AlmdudlerPriceVisibility==Visibility.Visible) {
