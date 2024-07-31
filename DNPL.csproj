@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Core\" />
   </ItemGroup>
 
   <ItemGroup>

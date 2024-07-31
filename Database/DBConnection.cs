@@ -134,10 +134,14 @@ public class DBConnection:IDisposable {
 		List<DrinkEntry> records = new List<DrinkEntry>();
 		lock(_lock) {
 			records=ReadCsvFile(csv => csv.GetRecords<DrinkEntry>().ToList());
-			var existingEntry = records.FirstOrDefault(x => x.Name==entry.Name);
-
-			existingEntry.Price=entry.Price;
-			existingEntry.Date=entry.Date;
+			int index = records.FindIndex(x => x.Name==entry.Name);
+			if(index!=-1) {
+				// Update existing entry
+				records[index]=entry;
+			} else {
+				// Add new entry
+				records.Add(entry);
+			}
 		}
 		SaveEntries(records);
 	}

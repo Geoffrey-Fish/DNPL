@@ -162,6 +162,7 @@ public class SettingsViewModel:ObservableObject {
 		AlmdudlerPriceVisibility=Visibility.Hidden;
 		ColaPriceVisibility=Visibility.Hidden;
 		PriceChangeInProgress=false;
+		EventAggregator.Instance.Publish("DrinkPriceChanged",input);
 	}
 	#endregion
 
