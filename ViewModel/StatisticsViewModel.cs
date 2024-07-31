@@ -69,11 +69,18 @@ public class StatisticsViewModel:ObservableObject {
 
 		TopDrinkText=mostUsedDrink;
 		TotalSpentText=totalAmountOverall.ToString()+" €";
-		SpeziText="Spezi: "+totalAmountPerDrink["Spezi"].ToString()+" €";
-		EisteeText="Eistee: "+totalAmountPerDrink["Eistee"].ToString()+" €";
-		AlmdudlerText="Almdudler: "+totalAmountPerDrink["Almdudler"].ToString()+" €";
-		ColaText="Cola: "+totalAmountPerDrink["Cola"].ToString()+" €";
-
+		if(totalAmountPerDrink.ContainsKey("Spezi")) {
+			SpeziText="Spezi: "+totalAmountPerDrink["Spezi"].ToString()+" €";
+		}
+		if(totalAmountPerDrink.ContainsKey("Eistee")) {
+			EisteeText="Eistee: "+totalAmountPerDrink["Eistee"].ToString()+" €";
+		}
+		if(totalAmountPerDrink.ContainsKey("Almdudler")) {
+			AlmdudlerText="Almdudler: "+totalAmountPerDrink["Almdudler"].ToString()+" €";
+		}
+		if(totalAmountPerDrink.ContainsKey("Cola")) {
+			ColaText="Cola: "+totalAmountPerDrink["Cola"].ToString()+" €";
+		}
 	}
 }
 
