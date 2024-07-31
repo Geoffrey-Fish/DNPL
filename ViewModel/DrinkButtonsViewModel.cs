@@ -117,6 +117,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 	}
 	//Little getaround to fetch the price of the drink
 	private decimal GetPrice(string drink) {
+		DrinkEntries=DrinkEntriesDB.GetDrinkEntries();
 		return DrinkEntries.FirstOrDefault(x => x.Name==drink).Price;
 	}
 }
