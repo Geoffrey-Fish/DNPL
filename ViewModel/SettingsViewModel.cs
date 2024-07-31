@@ -162,6 +162,7 @@ public class SettingsViewModel:ObservableObject {
 		AlmdudlerPriceVisibility=Visibility.Hidden;
 		ColaPriceVisibility=Visibility.Hidden;
 		PriceChangeInProgress=false;
+		EventAggregator.Instance.Publish("DrinkPriceChanged",input);
 	}
 	#endregion
 
@@ -184,6 +185,7 @@ public class SettingsViewModel:ObservableObject {
 			return new Dictionary<string,decimal> { { "ERROR",0 } };
 		}
 	}
+
 	#endregion
 
 }

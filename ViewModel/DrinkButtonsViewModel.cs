@@ -8,7 +8,6 @@ using DNPL.Model;
 namespace DNPL.ViewModel;
 public class DrinkButtonsViewModel:ObservableObject {
 
-	//Hallo Micha
 	#region Commands
 	public ICommand DrinkButtonPushedCommand { get; set; }
 	#endregion
@@ -61,9 +60,28 @@ public class DrinkButtonsViewModel:ObservableObject {
 		EisteePrice=GetPrice("Eistee").ToString()+" €";
 		AlmdudlerPrice=GetPrice("Almdudler").ToString()+" €";
 		ColaPrice=GetPrice("Cola").ToString()+" €";
+		EventAggregator.Instance.Subscribe("DrinkPriceChanged",UpdatePriceInfo);
 	}
 
+	private void UpdatePriceInfo(object payload) {
+		Dictionary<string,decimal> price = (Dictionary<string,decimal>)payload;
+		switch(price.Keys.First()) {
+			case "Spezi":
+				SpeziPrice = price.Values.First().ToString()+" €";
+				break;
+			case "Eistee":
+				EisteePrice = price.Values.First().ToString()+" €";
+				break;
+			case "Almdudler":
+				AlmdudlerPrice = price.Values.First().ToString()+" €";
+				break;
+			case "Cola":
+				ColaPrice = price.Values.First().ToString()+" €";
+				break;
+		}
 
+	}
+		
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
 		if(drink is string) {
 			AccountEntry=AccountBalanceDB.GetCurrentAccountEntry(); //get updated AccountEntry,else you get wrong values
