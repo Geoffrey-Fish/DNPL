@@ -37,14 +37,13 @@
 					<ColumnDefinition Width="280"/>
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
-				<Button x:Name="Lbl_CurrentBalanceInfo"
+				<Label x:Name="Lbl_CurrentBalanceInfo"
 					Grid.Row="0" Grid.Column="0"
 					Content="Current Balance on Account: "
 					FontSize="18"
 					Width="260"
 					Height="30"
-					Style="{StaticResource ButtonStyle}"
-					Command="{Binding CurrentBalanceInfoCommand}"/>
+					Style="{StaticResource LabelStyle}"/>
 				<TextBlock x:Name="Tbl_CurrentBalanceInfo"
 					Grid.Column="1"
 					Text="{Binding Tbl_CurrentBalanceInfo,UpdateSourceTrigger=PropertyChanged}"

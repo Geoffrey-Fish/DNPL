@@ -106,6 +106,7 @@ public class SettingsViewModel:ObservableObject {
 		AccountBalanceDB.SetAccountEntry(entry);
 		AccountEntry=AccountBalanceDB.GetCurrentAccountEntry();
 		LoadBalanceVisibility=Visibility.Hidden;
+		EventAggregator.Instance.Publish("BalanceLoad",this);
 	}
 
 	#endregion

@@ -65,9 +65,16 @@ public class MainWindowViewModel:ObservableObject {
 		CurrentView=_drinkButtonsViewModel;
 		//set up Exit Button
 		ExitCommand=new RelayCommand(execute: _ => Application.Current.Shutdown(),canExecute: _ => true);
+		//listen to events
+		EventAggregator.Instance.Subscribe("BalanceLoad",UpdateBalance);
+		EventAggregator.Instance.Subscribe("DrinkPurchased",UpdateBalance);
 	}
 
 	private void UpdatePrice() {
+		AccountEntry=AccountBalanceDB.GetCurrentAccountEntry();
+		Tbl_CurrentBalanceInfo=AccountEntry.After.ToString()+" €";
+	}
+	private void UpdateBalance(object obj) {
 		AccountEntry=AccountBalanceDB.GetCurrentAccountEntry();
 		Tbl_CurrentBalanceInfo=AccountEntry.After.ToString()+" €";
 	}

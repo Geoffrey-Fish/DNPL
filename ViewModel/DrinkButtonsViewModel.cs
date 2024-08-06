@@ -61,7 +61,6 @@ public class DrinkButtonsViewModel:ObservableObject {
 		EisteePrice=GetPrice("Eistee").ToString()+" €";
 		AlmdudlerPrice=GetPrice("Almdudler").ToString()+" €";
 		ColaPrice=GetPrice("Cola").ToString()+" €";
-		EventAggregator.Instance.Subscribe("DrinkPriceChanged",UpdatePriceInfo);
 	}
 
 	private void UpdatePriceInfo(object payload) {
@@ -80,6 +79,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 				ColaPrice=price.Values.First().ToString()+" €";
 				break;
 		}
+
 	}
 
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
@@ -113,6 +113,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 					ColaCounter++;
 					break;
 			}
+			EventAggregator.Instance.Publish("DrinkPurchased",new Dictionary<string,decimal> { { drink.ToString(),amount } });
 		}
 	}
 	//Little getaround to fetch the price of the drink
