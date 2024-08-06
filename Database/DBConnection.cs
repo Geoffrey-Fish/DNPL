@@ -8,7 +8,7 @@ using CsvHelper.Configuration;
 using DNPL.Model;
 
 namespace DNPL.Database;
-public class DBConnection:IDisposable {
+public class DBConnection:IDisposable { 
 	private static readonly Dictionary<string,DBConnection> _instances = new Dictionary<string,DBConnection>();
 	private static readonly object _lock = new object();
 	private readonly string _filePath;
@@ -29,8 +29,8 @@ public class DBConnection:IDisposable {
 		};
 	private List<DrinkEntry> _defaultDrinkEntries = new List<DrinkEntry>() {
 		new DrinkEntry() {
-		Name = "Mate",
-		Price = 0.8m,
+		Name = "Spezi",
+		Price = 0.5m,
 		Date = DateTime.Now
 		},
 		new DrinkEntry() {

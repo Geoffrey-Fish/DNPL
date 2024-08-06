@@ -57,11 +57,11 @@
 				    Width="200"
 					Style="{StaticResource LabelStyle}"
 					Content="All Drinks"/>
-			<TextBlock x:Name="Tbl_Mate"
+			<TextBlock x:Name="Tbl_Spezi"
 					Grid.Row="5"
 					Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
-					Text="{Binding MateText,UpdateSourceTrigger=PropertyChanged}"/>
+					Text="{Binding SpeziText,UpdateSourceTrigger=PropertyChanged}"/>
 			<TextBlock x:Name="Tbl_Eistee"
 					Grid.Row="6"
 					Grid.ColumnSpan="2"

@@ -26,8 +26,8 @@ public class StatisticsViewModel:ObservableObject {
 	public string TopDrinkText { get => _TopDrinkText; set { _TopDrinkText=value; OnPropertyChanged(nameof(TopDrinkText)); } }
 	private string _TotalSpentText { get; set; }
 	public string TotalSpentText { get => _TotalSpentText; set { _TotalSpentText=value; OnPropertyChanged(nameof(TotalSpentText)); } }
-	private string _MateText { get; set; }
-	public string MateText { get => _MateText; set { _MateText=value; OnPropertyChanged(nameof(MateText)); } }
+	private string _SpeziText { get; set; }
+	public string SpeziText { get => _SpeziText; set { _SpeziText=value; OnPropertyChanged(nameof(SpeziText)); } }
 	private string _EisteeText { get; set; }
 	public string EisteeText { get => _EisteeText; set { _EisteeText=value; OnPropertyChanged(nameof(EisteeText)); } }
 	private string _AlmdudlerText { get; set; }
@@ -69,8 +69,8 @@ public class StatisticsViewModel:ObservableObject {
 
 		TopDrinkText=mostUsedDrink;
 		TotalSpentText=totalAmountOverall.ToString()+" €";
-		if(totalAmountPerDrink.ContainsKey("Mate")) {
-			MateText="Mate: "+totalAmountPerDrink["Mate"].ToString()+" €";
+		if(totalAmountPerDrink.ContainsKey("Spezi")) {
+			SpeziText="Spezi: "+totalAmountPerDrink["Spezi"].ToString()+" €";
 		}
 		if(totalAmountPerDrink.ContainsKey("Eistee")) {
 			EisteeText="Eistee: "+totalAmountPerDrink["Eistee"].ToString()+" €";

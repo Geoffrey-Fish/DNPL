@@ -27,8 +27,8 @@ public class DrinkButtonsViewModel:ObservableObject {
 	#endregion
 
 	#region Properties PriceTags
-	private string _MatePrice { get; set; }
-	public string MatePrice { get { return _MatePrice; } set { _MatePrice=value; OnPropertyChanged(nameof(MatePrice)); } }
+	private string _SpeziPrice { get; set; }
+	public string SpeziPrice { get { return _SpeziPrice; } set { _SpeziPrice=value; OnPropertyChanged(nameof(SpeziPrice)); } }
 	private string _EisteePrice { get; set; }
 	public string EisteePrice { get { return _EisteePrice; } set { _EisteePrice=value; OnPropertyChanged(nameof(EisteePrice)); } }
 	private string _AlmdudlerPrice { get; set; }
@@ -38,8 +38,8 @@ public class DrinkButtonsViewModel:ObservableObject {
 	#endregion
 	#region Propertys Counters
 	//Counters for Visibility enhancement
-	private int _MateCounter { get; set; }
-	public int MateCounter { get { return _MateCounter; } set { _MateCounter=value; OnPropertyChanged(nameof(MateCounter)); } }
+	private int _SpeziCounter { get; set; }
+	public int SpeziCounter { get { return _SpeziCounter; } set { _SpeziCounter=value; OnPropertyChanged(nameof(SpeziCounter)); } }
 	private int _EisteeCounter { get; set; }
 	public int EisteeCounter { get { return _EisteeCounter; } set { _EisteeCounter=value; OnPropertyChanged(nameof(EisteeCounter)); } }
 	private int _AlmdudlerCounter { get; set; }
@@ -57,7 +57,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 		//set up the commands
 		DrinkButtonPushedCommand=new RelayCommand(execute: ExecuteDrinkButtonPushedCommand,canExecute: _ => true);
 		//set up the price info
-		MatePrice=GetPrice("Mate").ToString()+" €";
+		SpeziPrice=GetPrice("Spezi").ToString()+" €";
 		EisteePrice=GetPrice("Eistee").ToString()+" €";
 		AlmdudlerPrice=GetPrice("Almdudler").ToString()+" €";
 		ColaPrice=GetPrice("Cola").ToString()+" €";
@@ -66,8 +66,8 @@ public class DrinkButtonsViewModel:ObservableObject {
 	private void UpdatePriceInfo(object payload) {
 		Dictionary<string,decimal> price = (Dictionary<string,decimal>)payload;
 		switch(price.Keys.First()) {
-			case "Mate":
-				MatePrice=price.Values.First().ToString()+" €";
+			case "Spezi":
+				SpeziPrice=price.Values.First().ToString()+" €";
 				break;
 			case "Eistee":
 				EisteePrice=price.Values.First().ToString()+" €";
@@ -100,8 +100,8 @@ public class DrinkButtonsViewModel:ObservableObject {
 			};
 			AccountBalanceDB.SetAccountEntry(entry);
 			switch(drink.ToString()) {
-				case "Mate":
-					MateCounter++;
+				case "Spezi":
+					SpeziCounter++;
 					break;
 				case "Eistee":
 					EisteeCounter++;

@@ -58,15 +58,15 @@
 			<StackPanel x:Name="Stack_ChangeDrinks"
 						Grid.Row="2"
 						Orientation="Vertical" Margin="10">
-				<Button x:Name="Btn_MateDrink"
-						Content="Mate"
+				<Button x:Name="Btn_SpeziDrink"
+						Content="Spezi"
 						Style="{StaticResource ButtonStyle}"
 						Command="{Binding ChangePriceCommand}"
-						CommandParameter="Mate"/>
-				<TextBox x:Name="Tbx_MatePrice"
+						CommandParameter="Spezi"/>
+				<TextBox x:Name="Tbx_SpeziPrice"
 						Style="{StaticResource TextBoxStyle}"
-						Visibility="{Binding MatePriceVisibility}"
-						Text="{Binding Tbx_MatePrice,UpdateSourceTrigger=PropertyChanged}"/>
+						Visibility="{Binding SpeziPriceVisibility}"
+						Text="{Binding Tbx_SpeziPrice,UpdateSourceTrigger=PropertyChanged}"/>
 				<Button x:Name="Btn_EisteeDrink"
 						Content="Eistee"
 						Style="{StaticResource ButtonStyle}"
