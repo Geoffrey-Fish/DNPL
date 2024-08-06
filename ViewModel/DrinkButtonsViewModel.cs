@@ -67,21 +67,21 @@ public class DrinkButtonsViewModel:ObservableObject {
 		Dictionary<string,decimal> price = (Dictionary<string,decimal>)payload;
 		switch(price.Keys.First()) {
 			case "Spezi":
-				SpeziPrice = price.Values.First().ToString()+" €";
+				SpeziPrice=price.Values.First().ToString()+" €";
 				break;
 			case "Eistee":
-				EisteePrice = price.Values.First().ToString()+" €";
+				EisteePrice=price.Values.First().ToString()+" €";
 				break;
 			case "Almdudler":
-				AlmdudlerPrice = price.Values.First().ToString()+" €";
+				AlmdudlerPrice=price.Values.First().ToString()+" €";
 				break;
 			case "Cola":
-				ColaPrice = price.Values.First().ToString()+" €";
+				ColaPrice=price.Values.First().ToString()+" €";
 				break;
 		}
 
 	}
-		
+
 	private void ExecuteDrinkButtonPushedCommand(object drink) {
 		if(drink is string) {
 			AccountEntry=AccountBalanceDB.GetCurrentAccountEntry(); //get updated AccountEntry,else you get wrong values
@@ -117,6 +117,7 @@ public class DrinkButtonsViewModel:ObservableObject {
 	}
 	//Little getaround to fetch the price of the drink
 	private decimal GetPrice(string drink) {
+		DrinkEntries=DrinkEntriesDB.GetDrinkEntries();
 		return DrinkEntries.FirstOrDefault(x => x.Name==drink).Price;
 	}
 }
