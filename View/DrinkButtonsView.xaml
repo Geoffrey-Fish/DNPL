@@ -24,7 +24,7 @@
 			<!--Buttons-->
 			<Button x:Name="Btn_Spezi"
 					Grid.Row="0"
-					Content="Fucking Spezi"
+					Content="Spezi"
 					Margin="20"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
