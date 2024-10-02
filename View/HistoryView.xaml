@@ -22,17 +22,17 @@
 			</Grid.RowDefinitions>
 			<!--Buttons-->
 			<Button x:Name="Btn_ShowAccountHistory"
-					Grid.Row="0" Grid.Column="0"
+					Grid.Row="0" Grid.Column="1"
 					FontSize="14"
 					Content="Show Account History"
 					Style="{StaticResource ButtonStyle}"
-					Command="{Binding AccountHistoryCommand}"/>
+					Command="{Binding AccountHistoryCommand}" Margin="-5,10,15,0"/>
 			<Button x:Name="Btn_ShowDrinkHistory"
 					Grid.Row="0" Grid.Column="1"
 					FontSize="14"
 					Content="Show Drink History"
 					Style="{StaticResource ButtonStyle}"
-					Command="{Binding DrinkHistoryCommand}"/>
+					Command="{Binding DrinkHistoryCommand}" Margin="170,10,-160,0" Width="165"/>
 			<Label x:Name="Lbl_History"
 			        Grid.Row="1" Grid.ColumnSpan="2"
 					Style="{StaticResource LabelStyle}"

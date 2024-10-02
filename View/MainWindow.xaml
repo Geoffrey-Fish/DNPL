@@ -8,7 +8,7 @@
 		xmlns:viewModel="clr-namespace:DNPL.ViewModel"
 		xmlns:core="clr-namespace:DNPL.Core"
 		ResizeMode="NoResize"
-		Background="{StaticResource MainBackground}"
+		Background="Black"
         Title="Drink now, Pay later!" Height="800" Width="500">
 	<Window.DataContext>
 		<viewModel:MainWindowViewModel/>
@@ -62,27 +62,27 @@
 					Grid.Row="0"
 					Style="{StaticResource ButtonStyle}"
 					Content="Drinks"
-					Command="{Binding DrinkButtonsViewCommand}"/>
+					Command="{Binding DrinkButtonsViewCommand}" Margin="119,0,-109,10" Width="114"/>
 				<Button x:Name="Btn_ChangeValues"
 					Grid.Row="1"
 					Style="{StaticResource ButtonStyle}"
 					Content="Settings"
-					Command="{Binding SettingsViewCommand}"/>
+					Command="{Binding SettingsViewCommand}" Margin="119,0,-109,10" Width="114"/>
 				<Button x:Name="Btn_History"
 					Grid.Row="2"
 					Style="{StaticResource ButtonStyle}"
 					Content="History"
-					Command="{Binding HistoryViewCommand}"/>
+					Command="{Binding HistoryViewCommand}" Margin="119,0,-109,10" Width="114"/>
 				<Button x:Name="Btn_Statistics"
 					Grid.Row="3"
 					Style="{StaticResource ButtonStyle}"
 					Content="Statistics"
-					Command="{Binding StatisticsViewCommand}"/>
+					Command="{Binding StatisticsViewCommand}" Margin="119,0,-109,10" Width="114"/>
 				<Button x:Name="Btn_Exit"
 					Grid.Row="4"
 					Style="{StaticResource ButtonStyle}"
 					Content="Exit"
-					Command="{Binding ExitCommand}"/>
+					Command="{Binding ExitCommand}" Margin="119,-5,-109,15" Width="114"/>
 			</Grid>
 			<ContentControl Grid.Row="1" Grid.Column="1"
 					Content="{Binding CurrentView}"/>

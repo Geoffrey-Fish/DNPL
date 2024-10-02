@@ -27,7 +27,7 @@
 				<RowDefinition Height="auto"/>
 				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
-			
+
 			<Label x:Name="Lbl_TotalSpent"
 				    Content="Money spent in total"
 					Grid.Row="0" Grid.ColumnSpan="2"
@@ -38,7 +38,7 @@
 					Grid.Row="1" Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
 					Text="{Binding TotalSpentText,UpdateSourceTrigger=PropertyChanged}"/>
-			
+
 			<Label x:Name="Lbl_TopDrink"
 				    Grid.Row="2"
 				    Grid.ColumnSpan="2"
@@ -50,7 +50,7 @@
 					Grid.Row="3" Grid.ColumnSpan="2"
 					Style="{StaticResource TextBlockCoolStyle}"
 					Text="{Binding TopDrinkText,UpdateSourceTrigger=PropertyChanged}"/>
-			
+
 			<Label x:Name="Lbl_DrinkList"
 					Grid.Row="4" Grid.ColumnSpan="2"
 				    VerticalAlignment="Top"
@@ -79,10 +79,9 @@
 					Text="{Binding ColaText,UpdateSourceTrigger=PropertyChanged}" />
 			<Button x:Name="Btn_Refresh"
 					Grid.Row="9"
-					Grid.ColumnSpan="2"
 					Content="Refresh"
 					Style="{StaticResource ButtonStyle}"
-					Command="{Binding RefreshCommand}" />
+					Command="{Binding RefreshCommand}" Grid.Column="1" Margin="168,8,-331,2" Width="336" />
 		</Grid>
 	</Border>
 </UserControl>

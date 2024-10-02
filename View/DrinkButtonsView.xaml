@@ -9,84 +9,84 @@
             mc:Ignorable="d"
 			Background="Transparent"
             d:DesignHeight="650" d:DesignWidth="350">
-	<Border>
-		<Grid x:Name="Grid_DrinkButtons" >
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="3*"/>
-				<ColumnDefinition/>
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition/>
-				<RowDefinition/>
-				<RowDefinition/>
-				<RowDefinition/>
-			</Grid.RowDefinitions>
-			<!--Buttons-->
-			<Button x:Name="Btn_Mate"
+    <Border>
+        <Grid x:Name="Grid_DrinkButtons" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--Buttons-->
+            <Button x:Name="Btn_Mate"
 					Grid.Row="0"
 					Content="Mate"
-					Margin="20"
+					Margin="-20,20,-115,20"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
-					CommandParameter="Mate"/>
-			<Button x:Name="Btn_Eistee"
+					CommandParameter="Mate" Grid.Column="1"/>
+            <Button x:Name="Btn_Eistee"
 					Grid.Row="1"
-					Margin="20"
+					Margin="-20,20,-115,20"
 					Content="Eistee"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
-					CommandParameter="Eistee"/>
-			<Button x:Name="Almdudler"
+					CommandParameter="Eistee" Grid.Column="1"/>
+            <Button x:Name="Almdudler"
 					Grid.Row="2"
-					Margin="20"
+					Margin="-20,20,-115,20"
 					Content="Almdudler"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
-					CommandParameter="Almdudler"/>
-			<Button x:Name="Cola"
+					CommandParameter="Almdudler" Grid.Column="1"/>
+            <Button x:Name="Cola"
 					Grid.Row="3"
-					Margin="20"
-					Content="Cola"
+					Margin="-20,20,-115,20"
+					Content="BillowCola"
 					Style="{StaticResource ButtonStyle}"
 					Command="{Binding DrinkButtonPushedCommand}"
-					CommandParameter="Cola"/>
-			<!--PriceTags-->
-			<TextBlock x:Name="Tbl_MatePrice"
+					CommandParameter="Cola" Grid.Column="1"/>
+            <!--PriceTags-->
+            <TextBlock x:Name="Tbl_MatePrice"
 					Grid.Row="0" Grid.Column="1"
 					Text="{Binding MatePrice}"
 					Style="{StaticResource TextBlockCoolStyle}"/>
-			<Label x:Name="Lbl_MateCounter"
+            <Label x:Name="Lbl_MateCounter"
 				    Grid.Row="0" Grid.Column="1"
 				    VerticalAlignment="Bottom"
 				    Style="{StaticResource LabelCounterStyle}"
 				    Content="{Binding MateCounter,UpdateSourceTrigger=PropertyChanged}"/>
-			<TextBlock x:Name="Tbl_EisteePrice"
+            <TextBlock x:Name="Tbl_EisteePrice"
 					Grid.Row="1" Grid.Column="1"
 					Text="{Binding EisteePrice}"
 					Style="{StaticResource TextBlockCoolStyle}"/>
-			<Label x:Name="Lbl_EisteeCounter"
+            <Label x:Name="Lbl_EisteeCounter"
 			 	   Grid.Row="1" Grid.Column="1"
 			 	   VerticalAlignment="Bottom"
 			 	   Style="{StaticResource LabelCounterStyle}"
 			 	   Content="{Binding EisteeCounter,UpdateSourceTrigger=PropertyChanged}"/>
-			<TextBlock x:Name="Tbl_AlmdudlerPrice"
+            <TextBlock x:Name="Tbl_AlmdudlerPrice"
 					Grid.Row="2" Grid.Column="1"
 					Text="{Binding AlmdudlerPrice}"
 					Style="{StaticResource TextBlockCoolStyle}"/>
-			<Label x:Name="Lbl_AlmdudlerCounter"
+            <Label x:Name="Lbl_AlmdudlerCounter"
 					Grid.Row="2" Grid.Column="1"
 					VerticalAlignment="Bottom"
 					Style="{StaticResource LabelCounterStyle}"
 					Content="{Binding AlmdudlerCounter,UpdateSourceTrigger=PropertyChanged}"/>
-			<TextBlock x:Name="Tbl_ColaPrice"
+            <TextBlock x:Name="Tbl_ColaPrice"
 					Grid.Row="3" Grid.Column="1"
 					Text="{Binding ColaPrice}"
 					Style="{StaticResource TextBlockCoolStyle}"/>
-			<Label x:Name="Lbl_ColaCounter"
+            <Label x:Name="Lbl_ColaCounter"
 				    Grid.Row="3" Grid.Column="1"
 				    VerticalAlignment="Bottom"
 				    Style="{StaticResource LabelCounterStyle}"
 				    Content="{Binding ColaCounter,UpdateSourceTrigger=PropertyChanged}"/>
-		</Grid>
-	</Border>
+        </Grid>
+    </Border>
 </UserControl>
